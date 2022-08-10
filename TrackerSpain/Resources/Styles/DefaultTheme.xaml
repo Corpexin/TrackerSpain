@@ -33,7 +33,10 @@
     <!-- light theme alternatives -->
     <Color x:Key="DarkGray">#212125</Color>
     <Color x:Key="MidGray">#CFCFD3</Color>
-    <Color x:Key="LightGray">#EFEFEF</Color>
+    
+    <!-- Corpex UI Colors -->
+    <Color x:Key="CPXDarkGray">#1b1b21</Color>
+    <Color x:Key="CPXWhite">#FFFFFF</Color>
 
 
 
@@ -49,20 +52,20 @@
            TargetType="Element">
             <Setter Property="Shell.FlyoutBackgroundColor"
                         Value="{AppThemeBinding 
-                                Light={StaticResource LightGray}, 
-                                Dark={StaticResource Background_Mid}}"/>
+                                Light={StaticResource CPXDarkGray}, 
+                                Dark={StaticResource CPXDarkGray}}"/>
             <Setter Property="Shell.BackgroundColor"
                     Value="{AppThemeBinding 
-                        Light={StaticResource LightGray}, 
-                        Dark={StaticResource Background_Mid}}" />
+                        Light={StaticResource CPXDarkGray}, 
+                        Dark={StaticResource CPXDarkGray}}" />
             <Setter Property="Shell.ForegroundColor"
                 Value="{AppThemeBinding 
-                        Light={StaticResource DarkGray}, 
-                        Dark={StaticResource White}}" />
+                        Light={StaticResource CPXDarkGray}, 
+                        Dark={StaticResource CPXDarkGray}}" />
             <Setter Property="Shell.TitleColor"
                 Value="{AppThemeBinding 
-                        Light={StaticResource DarkGray}, 
-                        Dark={StaticResource White}}" />
+                        Light={StaticResource CPXWhite}, 
+                        Dark={StaticResource CPXWhite}}" />
             <!--<Setter Property="Shell.DisabledColor"
                 Value="#B4000000" />
             <Setter Property="Shell.UnselectedColor"
@@ -79,35 +82,35 @@
     <Style TargetType="TabBar">
         <Setter Property="Shell.TabBarBackgroundColor"
             Value="{AppThemeBinding 
-                                Light={StaticResource LightGray}, 
-                                Dark={StaticResource Background_Mid}}" />
+                                Light={StaticResource CPXDarkGray}, 
+                                Dark={StaticResource CPXDarkGray}}" />
         <Setter Property="Shell.TabBarTitleColor"
             Value="{AppThemeBinding 
-                        Light={StaticResource DarkGray}, 
-                        Dark={StaticResource White}}" />
+                        Light={StaticResource CPXWhite}, 
+                        Dark={StaticResource CPXWhite}}" />
         <Setter Property="Shell.TabBarUnselectedColor"
-            Value="{StaticResource TabOff}" />
+            Value="{StaticResource CPXDarkGray}" />
         <Setter Property="Shell.TabBarForegroundColor"
-            Value="{StaticResource Accent}" />
+            Value="{StaticResource CPXDarkGray}" />
     </Style>
 
     <Style TargetType="Page" ApplyToDerivedTypes="True">
         <Setter Property="Padding" Value="0"/>
         <Setter Property="BackgroundColor" Value="{AppThemeBinding 
-            Light={StaticResource MidGray},
-            Dark={StaticResource Background_Dark}}"/>
+            Light={StaticResource CPXDarkGray},
+            Dark={StaticResource CPXDarkGray}}"/>
     </Style>
 
     <Style TargetType="NavigationPage" ApplyToDerivedTypes="True">
         <Setter Property="BackgroundColor" Value="{AppThemeBinding 
-            Light={StaticResource LightGray},
-            Dark={StaticResource Background_Dark}}"/>
+            Light={StaticResource CPXDarkGray},
+            Dark={StaticResource CPXDarkGray}}"/>
         <Setter Property="BarBackgroundColor" Value="{AppThemeBinding 
-            Light={StaticResource LightGray},
-            Dark={StaticResource Background_Dark}}"/>
+            Light={StaticResource CPXDarkGray},
+            Dark={StaticResource CPXDarkGray}}"/>
         <Setter Property="BarTextColor" Value="{AppThemeBinding 
-                                                Light={StaticResource DarkGray}, 
-                                                Dark={StaticResource White}}"/>
+                                                Light={StaticResource CPXWhite}, 
+                                                Dark={StaticResource CPXWhite}}"/>
     </Style>
 
     <Style TargetType="Label">
@@ -115,7 +118,7 @@
         <Setter Property="FontSize"
                 Value="17"/>
         <Setter Property="TextColor"
-                Value="{AppThemeBinding Light={StaticResource DarkGray}, Dark={StaticResource White}}"/>
+                Value="{AppThemeBinding Light={StaticResource CPXWhite}, Dark={StaticResource CPXWhite}}"/>
     </Style>
     <Style TargetType="Label"
             Class="LargeTitle">
@@ -127,7 +130,7 @@
             Class="SectionTitle">
         <Setter Property="FontSize"
                 Value="27"/>
-        <Setter Property="TextColor" Value="{StaticResource Accent_Blue100}"/>
+        <Setter Property="TextColor" Value="{StaticResource CPXWhite}"/>
         <Setter Property="FontFamily" Value="OpenSansRegular"/>
     </Style>
     <Style TargetType="Label"
@@ -152,7 +155,7 @@
         <Setter Property="FontSize"
                 Value="14"/>
         <Setter Property="TextColor"
-                Value="{AppThemeBinding Light={StaticResource DarkGray}, Dark={StaticResource TabOff}}"/>
+                Value="{AppThemeBinding Light={StaticResource CPXWhite}, Dark={StaticResource CPXWhite}}"/>
     </Style>
     <Style TargetType="Label"
             Class="Footnote">

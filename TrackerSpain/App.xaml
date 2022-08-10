@@ -6,13 +6,29 @@
     <Application.Resources>
         <ResourceDictionary Source="Resources/Styles/DefaultTheme.xaml"/>
     </Application.Resources>
-
     <Application.MainPage>
-        <Shell 
-            FlyoutWidth="55"
-            FlyoutBehavior="{OnIdiom Phone=Disabled, Default=Locked}">
-
-            <!-- Desktop/Tablet-->
+        <Shell FlyoutWidth="55"
+               FlyoutBehavior="{OnIdiom Phone=Disabled, Default=Locked}" 
+               FlyoutBackgroundColor="{StaticResource CPXDarkGray}"
+               BackgroundColor ="{StaticResource CPXDarkGray}"
+               NavBarHasShadow="False"
+               NavBarIsVisible="False">
+            
+            <!-- Header -->
+            <Shell.FlyoutHeaderTemplate>
+                <DataTemplate>
+                    <Grid 
+                          HeightRequest="80">
+                        <Label Text="TS"
+                               TextColor="White"
+                               FontAttributes="Bold"
+                               HorizontalTextAlignment="Center"
+                               VerticalTextAlignment="Start" Padding="16"/>
+                    </Grid>
+                </DataTemplate>
+            </Shell.FlyoutHeaderTemplate>
+            
+            <!-- Desktop/Tablet -->
             <FlyoutItem Title="Home" Icon="tab_home.png">
                 <ShellContent ContentTemplate="{DataTemplate page:HomePage}"/>
             </FlyoutItem>
@@ -42,8 +58,7 @@
                 </Tab>
             </TabBar>
             
-            
-            <!-- Footer Settings-->
+            <!-- Footer Settings -->
             <Shell.FlyoutFooterTemplate>
                 <DataTemplate>
                     <Grid RowDefinitions="60">
@@ -56,10 +71,8 @@
                                WidthRequest="20"
                                HeightRequest="20"
                         />
-
                     </Grid>
                 </DataTemplate>
-
             </Shell.FlyoutFooterTemplate>
 
         </Shell>
