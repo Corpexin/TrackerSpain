@@ -9,35 +9,8 @@
 
     <Application.MainPage>
         <Shell 
-            FlyoutWidth="68"
+            FlyoutWidth="55"
             FlyoutBehavior="{OnIdiom Phone=Disabled, Default=Locked}">
-
-            <!--<Shell.FlyoutHeaderTemplate>
-                <DataTemplate>
-                    <BoxView HeightRequest="68"/>
-                </DataTemplate>
-
-            </Shell.FlyoutHeaderTemplate>-->
-
-            <Shell.FlyoutFooterTemplate>
-                <DataTemplate>
-                    <Grid RowDefinitions="68">
-                        <Grid.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-                        </Grid.GestureRecognizers>
-                        <Image Source="tab_settings.png"
-                               VerticalOptions="Center"
-                               HorizontalOptions="Center"
-                               WidthRequest="40"
-                               HeightRequest="40"
-                        />
-
-                    </Grid>
-                </DataTemplate>
-
-            </Shell.FlyoutFooterTemplate>
-
-            
 
             <!-- Desktop/Tablet-->
             <FlyoutItem Title="Home" Icon="tab_home.png">
@@ -68,21 +41,27 @@
                     <ShellContent ContentTemplate="{DataTemplate page:SettingsPage}"/>
                 </Tab>
             </TabBar>
-
-
-
-            <Shell.ItemTemplate>
+            
+            
+            <!-- Footer Settings-->
+            <Shell.FlyoutFooterTemplate>
                 <DataTemplate>
-                    <Grid
-                        RowDefinitions="68" HeightRequest="68">
-                        <Image Source="{Binding FlyoutIcon}"
+                    <Grid RowDefinitions="60">
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        </Grid.GestureRecognizers>
+                        <Image Source="tab_settings.png"
                                VerticalOptions="Center"
                                HorizontalOptions="Center"
-                               />
+                               WidthRequest="20"
+                               HeightRequest="20"
+                        />
+
                     </Grid>
                 </DataTemplate>
 
-            </Shell.ItemTemplate>
+            </Shell.FlyoutFooterTemplate>
+
         </Shell>
     </Application.MainPage>
 </Application>
